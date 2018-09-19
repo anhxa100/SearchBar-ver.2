@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,6 +26,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tqe-0h-ZY5" kind="show" identifier="ShowDetail" id="SVt-rd-aMA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,11 +36,58 @@
                             <outlet property="delegate" destination="xdq-vv-7eM" id="DU9-3g-dpR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1bx-wy-cji"/>
+                    <navigationItem key="navigationItem" id="1bx-wy-cji">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="O72-qu-hCx">
+                            <connections>
+                                <segue destination="Ecm-eW-27O" kind="presentation" identifier="AddItem" id="tew-1y-Kwp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1q-5H-E3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1464.8" y="178.56071964017991"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="mGs-zQ-Ud0">
+            <objects>
+                <viewController id="tqe-0h-ZY5" customClass="DetailViewController" customModule="SearchBar_Cach2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j6Y-Q6-7Lf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9F-5Q-V2m">
+                                <rect key="frame" x="64" y="319" width="247" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y9F-5Q-V2m" firstAttribute="centerX" secondItem="j6Y-Q6-7Lf" secondAttribute="centerX" id="AG9-vP-uJO"/>
+                            <constraint firstItem="QJ3-RD-g4g" firstAttribute="trailing" secondItem="Y9F-5Q-V2m" secondAttribute="trailing" constant="64" id="DVk-op-HDr"/>
+                            <constraint firstItem="Y9F-5Q-V2m" firstAttribute="leading" secondItem="QJ3-RD-g4g" secondAttribute="leading" constant="64" id="Quy-fY-5Ia"/>
+                            <constraint firstItem="Y9F-5Q-V2m" firstAttribute="centerY" secondItem="j6Y-Q6-7Lf" secondAttribute="centerY" id="hwc-0p-jxC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QJ3-RD-g4g"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JiU-7Y-Zlg">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="tJW-fr-puh">
+                            <connections>
+                                <action selector="Cancel:" destination="tqe-0h-ZY5" id="8kJ-eh-Bf9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="nbA-KZ-A7l"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveButtonLabel" destination="nbA-KZ-A7l" id="XVC-In-Oni"/>
+                        <outlet property="textField" destination="Y9F-5Q-V2m" id="1qG-kO-Qvd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXz-oY-8Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3654" y="179"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rkZ-Oh-d2a">
@@ -56,5 +107,26 @@
             </objects>
             <point key="canvasLocation" x="525.60000000000002" y="178.56071964017991"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ueB-sf-3Bf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ecm-eW-27O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="G5Z-qp-IVG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tqe-0h-ZY5" kind="relationship" relationship="rootViewController" id="yFX-mq-1FN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5w3-r2-41g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2556" y="575"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SVt-rd-aMA"/>
+    </inferredMetricsTieBreakers>
 </document>

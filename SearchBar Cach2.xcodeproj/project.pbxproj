@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		561EFCBA214C8CBF000DADAB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EFCB9214C8CBF000DADAB /* DetailViewController.swift */; };
 		567858BB2140D19700E5D564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567858BA2140D19700E5D564 /* AppDelegate.swift */; };
 		567858C02140D19700E5D564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567858BE2140D19700E5D564 /* Main.storyboard */; };
 		567858C22140D19700E5D564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567858C12140D19700E5D564 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		561EFCB9214C8CBF000DADAB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		567858B72140D19600E5D564 /* SearchBar Cach2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SearchBar Cach2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		567858BA2140D19700E5D564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		567858BF2140D19700E5D564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				567858BA2140D19700E5D564 /* AppDelegate.swift */,
-				567858BE2140D19700E5D564 /* Main.storyboard */,
+				561EFCB9214C8CBF000DADAB /* DetailViewController.swift */,
 				567858CC2140D1B900E5D564 /* TableViewController.swift */,
+				567858BE2140D19700E5D564 /* Main.storyboard */,
 				567858C12140D19700E5D564 /* Assets.xcassets */,
 				567858C32140D19700E5D564 /* LaunchScreen.storyboard */,
 				567858C62140D19700E5D564 /* Info.plist */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					567858B62140D19600E5D564 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -135,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561EFCBA214C8CBF000DADAB /* DetailViewController.swift in Sources */,
 				567858BB2140D19700E5D564 /* AppDelegate.swift in Sources */,
 				567858CD2140D1B900E5D564 /* TableViewController.swift in Sources */,
 			);
@@ -289,7 +294,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "anhxa100.SearchBar-Cach2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -307,7 +312,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "anhxa100.SearchBar-Cach2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
